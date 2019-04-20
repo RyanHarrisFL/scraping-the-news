@@ -4,7 +4,7 @@ var mongoose = require("mongoose");
 
 // These are required for 
 var axios = ("axios");
-var cherrios = ("cherrios");
+var cheerio = ("cheerio");
 
 // Requiring models from models folder
 var db = require("./models");
@@ -17,7 +17,7 @@ var app = express();
 // Start of Middle Ware config 
 
 //Uses logger to show requests
-app.use(logger("dev"));
+//app.use(logger("dev"));
 
 //Parsing body as JSON
 app.use(express.urlencoded({ extended: true }));
@@ -58,13 +58,26 @@ app.get("scrape/", function(res, res) {
                 console.log(err);
             });
         });
-        
+        // Message goes to the client side.
         res.setEncoding("Finished Scraping")
     });
 });
 
 
-
+// Gets all articles from the database
+app.get("/articles", function(req, res) {
+    //All articles
+    db.Article.find({})
+      .then(function(dbDirtArticle) {
+        //Sends articles back to client as json object.
+        res.json(dbDirtArticle);
+      })
+      .catch(function(err) {
+        // lets client know if there is an error trying to return article request.
+        res.json(err);
+      });
+  });
+  
 
 
 
