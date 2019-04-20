@@ -1,3 +1,13 @@
+
 body {
-    background-color: red;
+    background-color: #cdc0b0;
 }
+
+.jumbotron {
+    background: url('images/feature_dirt.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    border-bottom: 2px solid #8d8382
+ }
