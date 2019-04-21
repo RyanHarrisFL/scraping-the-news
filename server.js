@@ -1,10 +1,12 @@
 
 var express = require("express");
+var logger = require("morgan");
 var mongoose = require("mongoose");
 
+
 // These are required for 
-var axios = ("axios");
-var cheerio = ("cheerio");
+var axios = require("axios");
+var cheerio = require("cheerio");
 
 // Requiring models from models folder
 var db = require("./models");
@@ -17,7 +19,7 @@ var app = express();
 // Start of Middle Ware config 
 
 //Uses logger to show requests
-//app.use(logger("dev"));
+app.use(logger("dev"));
 
 //Parsing body as JSON
 app.use(express.urlencoded({ extended: true }));
@@ -31,7 +33,7 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/newsScraperPopulator", { useNewUrlParser: true});
 
-app.get("scrape/", function(res, res) {
+app.get("/scrape", function(res, res) {
 //Uses axios to grab the body of the html 
     axios.get("https://www.tmz.com/").then(function(response) {
         // Cheerio takes body of html from site and saves it to $ for shorthand selector
@@ -39,11 +41,11 @@ app.get("scrape/", function(res, res) {
 
         //creating an empty object to display results
 
-        $("article h5").each(function (i, element){
+        $("article h4").each(function (i, element){
             var result = {};
 
             result.title = $(this)
-                .children("data-text")
+                .children("a")
                 .text();
             result.link = $(this)
                 .children("a")
@@ -56,10 +58,11 @@ app.get("scrape/", function(res, res) {
             })
             .catch(function (err) {
                 console.log(err);
+                console.log(dbDirtArticle);
             });
         });
         // Message goes to the client side.
-        res.setEncoding("Finished Scraping")
+        res.send("Scrape Complete");
     });
 });
 
@@ -78,8 +81,6 @@ app.get("/articles", function(req, res) {
       });
   });
   
-
-
 
 
 // Start the server
