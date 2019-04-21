@@ -81,10 +81,21 @@ app.get("/articles", function(req, res) {
       });
   });
   
-
+// Grabs a specific article and populates comments related to it. 
+app.get("/articles/:id", function(req, res) {
+    db.Article.findOne({ _id: req.params.id })
+      .populate("Comments")
+      .then(function(dbDirtArticle) {
+        res.json(dbDirtArticle);
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
+  });
 
 // Start the server
 app.listen(PORT, function() {
     console.log("App running on port " + PORT + "!");
   });
+  
   
