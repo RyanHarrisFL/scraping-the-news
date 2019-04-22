@@ -12,52 +12,97 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>The Dirt - Dirty News for People Who Like Dirt</title>
+    <title>The Dirty News - Home</title>
   </head>
   <body>
     <!--START OF NAVIGATION -->
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">THE DIRT</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarText"
-        aria-controls="navbarText"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#"
-              >Home </a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Saved Articles</a>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          Giving you dirty news 24/7!
-        </span>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">THE DIRT NEWS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Saved Articles</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-outline-success mr-2 mb-2 scrape-new"
+                type="button"
+              >
+                Scrape New Articles
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-success mr-2 clear" type="button">
+                Clear Articles
+              </button>
+            </li>
+          </ul>
+
+          <span class="navbar-text">
+            Giving you dirty news 24/7!
+          </span>
+        </div>
+      </nav>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4 text-center">The Dirt News</h1>
+          <p class="lead text-center">
+            Reading these news articles makes you a horrible person!
+          </p>
+        </div>
       </div>
-    </nav>
     </header>
     <!--END OF NAVIGATION-->
 
-    <!--SCRIPT SECTION START-->
-    <script
-      src="https://code.jquery.com/jquery-3.4.0.js"
-      integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-      crossorigin="anonymous"
-    ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-    <!--SCRIPT SECTION END-->
+    <!--START OF NO ARTICLES CARD-->
+    <div class="card text-white bg-dark mb-3 mr-2 ml-2">
+            <div class="card-body">
+              <h5 class="card-title text-center">Uh oh! Looks like you don't have any articles! </h5>
+              <p class="card-text text-center"><a href="#">Try Scraping for New Articles</a></p>
+              <p class="card-text text-center"><a href="#">View Saved Articles</a></p>
+            </div>
+          </div>
+    <!--END OF NO ARTICLES CARD-->
+
+    <footer class="text-center">
+      <nav class="navbar fixed-bottom navbar-light bg-light">
+        <a class="navbar-brand" href="#">© 2019 - Ryan Harris</a>
+      </nav>
+    </footer>
+
+<!--SCRIPT SECTION START-->
+<script
+src="https://code.jquery.com/jquery-3.4.0.js"
+integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"
+></script>
+<script
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"
+></script>
+<script src="app.js"></script>
+<!--SCRIPT SECTION END-->
+
   </body>
 </html>
