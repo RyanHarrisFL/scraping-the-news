@@ -61,29 +61,67 @@
     </header>
     <!--END OF NAVIGATION-->
 
+    <!--MODAL START FOR ARTICLE COMMENTS -->
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid text-center">
+              <h4>Notes For Article: 5cbd1ad7269fe80015ff6841</h4>
+              <hr />
+              <ul class="list-group note-container">
+                <li class="list-group-item note">
+                  nototootototo<button class="btn btn-danger note-delete">
+                    x
+                  </button>
+                </li>
+              </ul>
+              <textarea placeholder="New Comment" rows="4" cols="60"></textarea
+              ><button class="btn btn-success save">Save Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--MODAL END FOR ARTICLE COMMENTS -->
 
     <!--START OF SAVED ARTICLE CARD-->
     <div class="card mr-2 ml-2 mb-3">
-            <div class="card-body text-center">
-              <h5 class="card-title text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, excepturi quisquam! Laudantium labore voluptatibus quisquam dolores? </h5>
-              <a href="#" class="btn btn-primary save">Delete Article</a>
-              <a href="#" class="btn btn-primary save">Add Comments</a>
-            </div>
-          </div>
+      <div class="card-body text-center">
+        <h5 class="card-title text-center">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro,
+          excepturi quisquam! Laudantium labore voluptatibus quisquam dolores?
+        </h5>
+        <a href="#" class="btn btn-primary save">Delete Article</a>
+        <a href="#modal" type="button" class="btn btn-primary save" data-toggle="modal" data-target="#exampleModal">Add Comments</a>
+      </div>
+    </div>
     <!--END OF SAVED ARTICLE CARD-->
-
 
     <!--START OF NO SAVED ARTICLES CARD-->
     <div class="card text-white bg-dark mb-3 mr-2 ml-2">
-            <div class="card-body">
-              <h5 class="card-title text-center">Uh Oh. Looks like we don't have any saved articles. </h5>
-              <p class="card-text text-center"><a href="#">Browse Available Articles</a></p>
-            </div>
-          </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          Uh Oh. Looks like we don't have any saved articles.
+        </h5>
+        <p class="card-text text-center">
+          <a href="#">Browse Available Articles</a>
+        </p>
+      </div>
+    </div>
     <!--END OF NO SAVED ARTICLES CARD-->
 
-
-    
     <footer class="text-center">
       <nav class="navbar fixed-bottom navbar-light bg-light">
         <a class="navbar-brand" href="#">© 2019 - Ryan Harris</a>
@@ -108,6 +146,5 @@
     ></script>
     <script src="app.js"></script>
     <!--SCRIPT SECTION END-->
-
   </body>
 </html>
