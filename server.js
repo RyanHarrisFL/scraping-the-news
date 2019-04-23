@@ -31,7 +31,9 @@ app.use(express.static("public"));
 
 //Creating connection to MongoDB database
 
-mongoose.connect("mongodb://localhost/newsScraperPopulator", { useNewUrlParser: true});
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsScraperPopulator";
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true});
 
 app.get("/scrape", function(res, res) {
 //Uses axios to grab the body of the html 
