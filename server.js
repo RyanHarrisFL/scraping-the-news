@@ -98,7 +98,7 @@ app.get("/articles/:id", function(req, res) {
   // Delete all articles from the database
 app.get("/clearall", function(req, res) {
   // Remove every note from the notes collection
-  db.Article.drop({}, function(error, response) {
+  db.Article.remove({}, function(error, response) {
     if (error) {
       console.log(error);
       res.send(error);
