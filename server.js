@@ -80,7 +80,8 @@ app.get("/articles", function(req, res) {
         res.json(err);
       });
   });
-  
+
+
 // Grabs a specific article and populates comments related to it. 
 app.get("/articles/:id", function(req, res) {
     db.Article.findOne({ _id: req.params.id })
@@ -93,9 +94,27 @@ app.get("/articles/:id", function(req, res) {
       });
   });
 
+
+  // Delete all articles from the database
+app.get("/clearall", function(req, res) {
+  // Remove every note from the notes collection
+  db.Article.drop({}, function(error, response) {
+    if (error) {
+      console.log(error);
+      res.send(error);
+    }
+    else {
+      console.log(response);
+      res.send(response);
+    }
+  });
+});
+
 // Start the server
 app.listen(PORT, function() {
     console.log("App running on port " + PORT + "!");
   });
   
+  
+
   
