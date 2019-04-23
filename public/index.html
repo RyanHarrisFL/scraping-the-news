@@ -18,7 +18,7 @@
     <!--START OF NAVIGATION -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">THE DIRT NEWS</a>
+        <a class="navbar-brand" href="index.html">THE DIRTY NEWS</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -33,10 +33,10 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home </a>
+              <a class="nav-link" href="index.html">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Saved Articles</a>
+              <a class="nav-link" href="saved.html">Saved Articles</a>
             </li>
             <li class="nav-item">
               <button href="#"
@@ -60,7 +60,7 @@
       </nav>
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4 text-center">The Dirt News</h1>
+          <h1 class="display-4 text-center">The Dirty News</h1>
           <p class="lead text-center">
             Reading these news articles makes you a horrible person!
           </p>
@@ -72,11 +72,11 @@
     <div id="articles"></div>
 
     <!--START OF NO ARTICLES CARD-->
-    <div class="card text-white bg-dark mb-3 mr-2 ml-2">
+    <div id="no-article-card" class="card text-white bg-dark mb-3 mr-2 ml-2">
             <div class="card-body">
               <h5 class="card-title text-center">Uh oh! Looks like you don't have any articles! </h5>
-              <p class="card-text text-center"><a href="#">Try Scraping for New Articles</a></p>
-              <p class="card-text text-center"><a href="#">View Saved Articles</a></p>
+              <p class="card-text text-center"><a id="scrape-news" href="#">Try Scraping for New Articles</a></p>
+              <p class="card-text text-center"><a href="saved.html">View Saved Articles</a></p>
             </div>
           </div>
     <!--END OF NO ARTICLES CARD-->
