@@ -1,0 +1,100 @@
+
+    <!--START OF NAVIGATION -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">THE DIRTY NEWS</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saved">Saved Articles</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-success mr-2 clear" type="button">
+                Clear Articles
+              </button>
+            </li>
+          </ul>
+
+          <span class="navbar-text">
+            Giving you dirty news 24/7!
+          </span>
+        </div>
+      </nav>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4 text-center">The Dirty News</h1>
+          <p class="lead text-center">
+            Reading these news articles makes you a horrible person!
+          </p>
+        </div>
+      </div>
+    </header>
+    <!--END OF NAVIGATION-->
+
+    <!--MODAL START FOR ARTICLE COMMENTS -->
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Comments</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid text-center">
+              <h4>Notes For Article: 5cbd1ad7269fe80015ff6841</h4>
+              <hr />
+              <ul class="list-group note-container">
+                <li class="list-group-item note">
+                  nototootototo<button class="btn btn-danger note-delete">
+                    x
+                  </button>
+                </li>
+              </ul>
+              <textarea placeholder="New Comment" rows="4" cols="60"></textarea
+              ><button class="btn btn-success save">Save Comment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--MODAL END FOR ARTICLE COMMENTS -->
+
+    <!--START OF NO SAVED ARTICLES CARD-->
+    <div class="card text-white bg-dark mb-3 mr-2 ml-2">
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          Uh Oh. Looks like we don't have any saved articles.
+        </h5>
+        <p class="card-text text-center">
+          <a href="/">Browse Available Articles</a>
+        </p>
+      </div>
+    </div>
+    <!--END OF NO SAVED ARTICLES CARD-->
+
+    <footer class="text-center">
+      <nav class="navbar fixed-bottom navbar-light bg-light">
+        <a class="navbar-brand" href="/">© 2019 - Ryan Harris</a>
+      </nav>
+    </footer>
