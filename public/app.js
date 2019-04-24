@@ -24,6 +24,7 @@ $(document).on("click", "#clear", function() {
      
     });
     handleArticleScrape();
+    showCard()
     });
 
     function handleArticleScrape() {
@@ -36,6 +37,11 @@ $(document).on("click", "#clear", function() {
 // Function for hiding No Article Card on Page
 function hideCard() {
   $("#no-article-card").hide();
+};
+
+// Function for hiding No Article Card on Page
+function showCard() {
+  $("#no-article-card").show();
 };
 
 });
