@@ -28,6 +28,22 @@ app.use(express.json());
 // Creates static folder
 app.use(express.static("public"));
 
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
+// get route -> index
+app.get("/", function(req, res) {
+  res.render("index");
+});
+
+app.get("/saved", function(req, res) {
+  res.render("saved");
+});
+
+
 
 //Creating connection to MongoDB database
 
@@ -67,7 +83,6 @@ app.get("/scrape", function(res, res) {
         res.send("Scrape Complete");
     });
 });
-
 
 // Gets all articles from the database
 app.get("/articles", function(req, res) {
